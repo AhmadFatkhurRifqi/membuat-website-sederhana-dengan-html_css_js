@@ -1,0 +1,545 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  background-color: rgb(347, 75, 2);
+  justify-content: space-around;
+  /* padding: 20px 0; */
+  color: white;
+  height: 4rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+nav .logo h1 {
+  font-family: Sacramento;
+  letter-spacing: 3px;
+}
+
+nav ul {
+  display: flex;
+  width: 25%;
+  /* gap: 7rem; */
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: aqua;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: rgb(250, 240, 255);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(234, 192, 255);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Provil */
+.provil {
+  margin-top: 4rem;
+  background-color: #7868;
+  padding: 70px 1px;
+  position: relative;
+}
+
+.provil .hero {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+.provil img {
+  border-radius: 50%;
+  border: 0.6rem solid #834;
+}
+
+.provil h3 {
+  font-size: 1.5rem;
+  /* border: 2px solid #678; */
+  background-color: #678;
+  padding: 10px;
+  width: 100px;
+  margin: 1rem auto;
+  color: white;
+}
+
+.provil h1 {
+  font-family: Sacramento;
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+.provil h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* margin: 10px 100px; */
+  color: gray;
+}
+
+.provil p {
+  margin-top: 1rem;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #c71585;
+}
+
+.provil .logo ul {
+  color: purple;
+  margin-top: 4rem;
+  gap: 4rem;
+  font-size: 1.5rem;
+  justify-content: center;
+  display: flex;
+}
+
+.provil .knob {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 1.3rem;
+}
+
+.provil .knob div {
+  margin: 40px;
+  padding: 10px 20px;
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+.provil .knob .contact {
+  background-color: red;
+  color: white;
+}
+
+/* Contact */
+.contact {
+  position: relative;
+  padding: 100px;
+  background-color: #33b2ff;
+}
+
+.contact h1 {
+  text-align: center;
+  font-family: Sacramento;
+  font-size: 4rem;
+}
+
+.contact .row {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  padding: 100px;
+}
+
+.contact .row .about-image {
+  width: 100%;
+}
+
+.contact .row .about-image img {
+  border-radius: 50px;
+}
+
+.contact .row .content {
+  /* position: relative; */
+  width: 100%;
+}
+
+.contact .row .content h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contact .row .content .input-grup {
+  display: flex;
+  align-items: center;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.contact .row .content form input {
+  /* width: 40rem; */
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid salmon;
+}
+
+.contact .row .content form i {
+  font-size: 1.5rem;
+}
+
+.contact .row .content form .submit {
+  cursor: pointer;
+  background-color: #c71585;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 30%;
+  font-size: 2rem;
+}
+
+/* Page */
+
+.page .background img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.page .row {
+  /* padding: 10px; */
+  position: relative;
+  display: flex;
+  padding: 8.9rem 10rem;
+  /* padding-top: ; */
+}
+
+.page .row .about-image {
+  width: 100%;
+  text-align: center;
+}
+
+.page .row .about-image img {
+  width: 80%;
+}
+
+.page .row .content {
+  width: 100%;
+}
+
+.page .row .content h1 {
+  color: #ff334c;
+  font-size: 4rem;
+}
+
+.page .row .content h1 span {
+  color: white;
+}
+
+.page .row .content p {
+  margin: 30px 0;
+  font-size: 1rem;
+  color: white;
+  width: 80%;
+}
+
+.page .row .content button {
+  color: white;
+  border: 1px solid #33ff77;
+  background-color: #33ff77;
+  padding: 2rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 40% 40% 40% 40%;
+}
+
+/* footer */
+footer {
+  background: linear-gradient(#33f0ff, #ff33d4);
+  padding: 100px 200px;
+}
+
+footer .logo {
+  display: flex;
+}
+
+footer .logo ul {
+  margin: 0 100px;
+  color: white;
+}
+
+footer .logo ul li .judul {
+  /* width: 60px;
+  height: 2px;
+  background-color: red; */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+footer .logo ul .media {
+  display: flex;
+}
+
+footer .logo ul .media i {
+  font-size: 1.5rem;
+  background-color: #839192;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+footer .logo ul li {
+  margin-top: 20px;
+}
+
+/* Responsive Breakpoint */
+/* Laptop */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+
+  .contact .content h2 {
+    margin-top: 3rem;
+  }
+
+  .contact .row {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+  }
+
+  .contact .row .about-image img {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .page .background img {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+  }
+
+  footer {
+    padding: 50px 100px;
+  }
+
+  footer .logo ul {
+    margin: 0 40px;
+  }
+}
+
+/* Mode Tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  nav ul {
+    width: 50%;
+  }
+
+  .provil .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .provil .hero p {
+    letter-spacing: normal;
+    font-size: 1.1rem;
+  }
+
+  .contact .about-image img {
+    width: 100%;
+  }
+
+  .contact .row {
+    display: block;
+  }
+
+  .contact h1 {
+    padding-bottom: 5rem;
+  }
+
+  .page .row .content h1 {
+    font-size: 2rem;
+  }
+
+  .page .row .content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #33f0ff;
+  }
+
+  .page .row .content button {
+    padding: 1rem;
+  }
+
+  .page .background img {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+  }
+
+  footer {
+    padding: 10px 80px;
+  }
+
+  footer .logo ul {
+    margin: 0 20px;
+  }
+
+  footer .logo ul li {
+    margin-top: 10px;
+  }
+}
+
+/* Haehphone */
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    background-color: rgb(347, 75, 2);
+    z-index: -1;
+    transform: translate(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  nav ul li a {
+    font-size: 2rem;
+  }
+
+  .contact .row {
+    background-color: white;
+    border-radius: 10px;
+    /* display: flex; */
+    padding: 15px;
+  }
+  .contact {
+    /* position: relative; */
+    padding: 10px;
+    background-color: #33b2ff;
+  }
+
+  .contact h1 {
+    padding: 5rem;
+  }
+
+  .page .row {
+    display: block;
+    padding: 8rem 10rem;
+  }
+
+  .page .background img {
+    width: 100%;
+    height: 80%;
+  }
+
+  .page .row .about-image img {
+    width: 25rem;
+    margin-bottom: 25px;
+  }
+
+  .page .row .content h1 {
+    font-size: 4rem;
+  }
+
+  .page .row .content p {
+    font-size: 1.2rem;
+  }
+
+  /* footer .logo {
+    display: block;
+  } */
+
+  footer {
+    padding: 10px 20px;
+  }
+
+  footer .logo ul {
+    margin: 0 10px;
+  }
+
+  footer .logo ul li {
+    margin-top: 10px;
+  }
+}
